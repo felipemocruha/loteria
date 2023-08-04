@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from 'next/image'
 import styles from './page.module.css'
 
-function getRandom(min, max) {
+function getRandom(min: number, max: number): number {
     let range = max - min;
     let bits_needed = Math.ceil(Math.log2(range + 1));
     let bytes_needed = Math.ceil(bits_needed / 8);
@@ -24,7 +24,7 @@ function getRandom(min, max) {
     return result % (range + 1) + min;
 }
 
-function generate() {
+function generate(): string {
   let numbers = [];
   let len = 0;
 
