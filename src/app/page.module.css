@@ -8,6 +8,7 @@
 }
 
 .button {
+	cursor: pointer;
 	background-color: #2196F3;
 	border: none;
 	border-radius: 2px;
