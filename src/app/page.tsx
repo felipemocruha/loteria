@@ -29,7 +29,9 @@ export default function Home() {
 		>
 		  Gerar
 		</button>
+
 		<br/>
+
 		<h1> {numbers} </h1>
 	  </div>
 	</main>
