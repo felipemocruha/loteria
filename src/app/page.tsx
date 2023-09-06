@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import RandomNumber from "random-number-csprng";
 
 import Image from 'next/image'
 import styles from './page.module.css'
@@ -24,12 +25,12 @@ function getRandom(min: number, max: number): number {
     return result % (range + 1) + min;
 }
 
-function generate(): string {
+async function generate(): string {
   let numbers = [];
   let len = 0;
 
   for (let i = 0; i < 6; i++) {
-	numbers.push(getRandom(1, 60));
+	numbers.push(await RandomNumber(1, 60));
   }
 
   return numbers.sort((a,b) => a - b).join(" ");
